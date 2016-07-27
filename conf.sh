@@ -11,6 +11,6 @@ COORDINATE=${URL##*@}
 LAT=${COORDINATE%,*}
 LONG=${COORDINATE##*,}
 
-sed -i "/^token=/c\token=" config.properties
+#sed -i "/^token=/c\token=" config.properties # Depricated, auth works again
 sed -i "/^latitude=/c\latitude=$LAT" config.properties
 sed -i "/^longitude=/c\longitude=$LONG" config.properties
